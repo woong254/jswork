@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ki">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개발자지원서</title>
+  <style>
+    #container{
+      width: 600px;
+      margin: 0 auto;
+      border: 1px solid #000;
+      padding: 20px;
+    }
+    fieldset{
+     border: none; 
+    }
+    ul li{
+      list-style: none;
+    }
+    legend{
+      font-weight: bold;
+    }
+    .donggi{
+      text-align: center;
+    }
+    .donggi legend{
+      text-align: left;
+    }
+    .donggi ul{
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>프런트엔드 개발자 지원서</h1>
+      <p>HTML, CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.</p>
+      <hr>
+    </header>
+    <fieldset>
+      <legend>개인 정보</legend>
+      <ul>
+        <li>
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" placeholder="공백없이 입력하세요.">
+        </li>
+        <li>
+          <label for="tel">연락처</label>
+          <input type="tel" id="tel" name="tel" size="18">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>지원 분야</legend>
+      <ul>
+        <li>
+          <label><input type="radio" name="giwon" value="pub">웹 퍼블리싱</label>
+        </li>
+        <li>
+          <label><input type="radio" name="giwon" value="apk">웹 애플리케이션 개발</label>
+        </li>
+        <li>
+          <label><input type="radio" name="giwon" value="ground">개발 환경 개선</label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="donggi">
+      <legend>지원 동기</legend>
+      <ul>
+        <li>
+          <textarea cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+        </li>
+        <li>
+          <button type="submit">접수하기</button>
+          <button type="reset">다시쓰기</button>
+        </li>
+      </ul>
+    </fieldset>
+    <form name="form1" action="aaa.jsp" method="post"></form>
+  </div>
+</body>
+</html>

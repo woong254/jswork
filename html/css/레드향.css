@@ -1,0 +1,42 @@
+.cot1{
+  border: 1px solid #ccc;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.cot1 img{
+  margin: 30px;
+  width: 150px;
+  float: left;
+}
+.cot2{
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.cot2 img{
+  float: right;
+  height: 150px;
+}
+.cot3{
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px;
+}
+table{
+  border: 1px solid hotpink;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+th, td{
+  border: 1px solid hotpink;
+  padding: 10px 40px;
+}
+thead{
+  background-color: wheat;
+}
+.col1{
+  background-color: rgb(241, 213, 228);
+}
