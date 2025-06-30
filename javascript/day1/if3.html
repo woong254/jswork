@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let com; //컴퓨터가 만든 수
+    let me; //내가 입력하는 수
+    //1~10 사이 난수
+    com = Math.floor(Math.random() * 10) +1;
+  while(true) {
+    me = prompt('1~10까지 무작위로 입력')
+    if( com > me ) {
+      alert("난수보다 작습니다")
+    } else if( com < me ) {
+      alert("난수보다 큽니다")
+    } else if( com == me) {
+      alert("정답")
+      brek;
+    } else {
+      alert("숫자를 입력하세요")
+    }
+  }
+  </script> 
+</body>
+</html>
