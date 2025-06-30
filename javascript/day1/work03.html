@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과제3</title>
+</head>
+
+<body>
+  <script>
+    let com;
+    let me;
+    com = Math.floor(Math.random() * 3) + 1;
+    me = prompt('1:가위, 2:바위, 3:보')
+    console.log(com)
+    if (me == 3 && com == 2) {
+      alert('승')
+    } else if (me == 3 && com == 1) {
+      alert('패')
+    } else if (me == 2 && com == 1) {
+      alert('승')
+    } else if (me == 2 && com == 3) {
+      alert('패')
+    } else if (me == 1 && com == 3) {
+      alert('승')
+    } else if (me == 1 && com == 2) {
+      alert('패')
+    } else {
+      alert('무')
+    }
+  </script>
+</body>
+
+</html>
