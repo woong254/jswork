@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과제7</title>
+</head>
+
+<body>
+  <script>
+    //자리배치도
+    // 사람수
+    // 한줄 사람수
+    // 몇 줄수
+    // 의자번호
+    // 배치도
+    // let many = prompt('입장객 수 를 입력하세요');
+    // let col = prompt('한줄에 몇명 앉을지 입력하세요');
+    // let row = parseInt(many / col);
+    // row = (many % col == 0) ? row : ++row;
+    // let seat = 0;
+    // let table = `<table border=:'1'> 
+    //     <caption>자리배치도</caption>` ;
+    // for (let i = 1; i <= row; i++) {
+    //   table += "<tr>"
+    //   for (let j = 1; j <= col; j++) {
+    //     seat++;
+    //     table += `<td>좌석${seat}</td>`;
+    //     if (many <= seat) {
+    //       break;
+    //     }
+    //   }
+    //   table += "</tr>";
+    // }
+    // table += "</table>";
+    // document.write(table);
+
+    // min 에서 max 까지 홀수합과 짝수합 구하기
+    let min = Number(prompt("최소값을 입력하세요."));
+    let max = Number(prompt("최대값을 입력하세요."));
+    let even = 0;
+    let odd = 0;
+    for (let i = min; i <= max; i++) {
+      if (i % 2 == 0) {
+        even += i;
+      }
+      if (i % 2 == 1) {
+        odd += i;
+      }
+    }
+    console.log(`홀수합 ${odd} 짝수합 ${even}`)
+  </script>
+</body>
+
+</html>

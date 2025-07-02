@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+</head>
+<body>
+  <h3>함수</h3>
+  <script>
+    //전역변수 선언
+    var a;
+    let b;
+    var a;
+    var c = a + 3;
+    let letc = b + 3;
+    //let b; 재선언 불가
+    console.log(c);
+    console.log(letc);
+    //함수 선언
+    function sum(min, max){
+      let hap = 0;
+      for(let i=min; i<=max; i++){
+        hap += i;
+      }
+      return hap;
+    }
+    //함수 실행
+    console.log(sum(1,100));
+
+    //콜백함수
+    function order(coffie, callback){
+      console.log(`${coffie} 주문 접수`);
+      setTimeout(function(){
+        callback(coffie);
+      }, 3000)
+    }
+    
+    function done(coffie){
+      console.log(`${coffie} 준비 완료`);
+    }
+    
+    order('아메리카노', done)
+    order('라떼', done)
+    order('팥빙수', done)
+    
+    //배열의 합
+    let nums = [10,20,30,40,50];
+    let nums2 = [];
+    //nums2 에 1 ~ 100 까지의 무작위 수 5개를 저장하고
+    // start ~ end 까지의 무작위 수 5개 저장
+    //합을 구하세요
+    let start = 20;
+    let end = 60;
+    for(let i=0; i<5; i++){ //i : 배열의 방번호
+      nums2[i] = parseInt(Math.random() * (end - start + 1)) + start; 
+    }
+    console.log(nums2);
+    console.log(`nums2의 합 = ${arrhap(...nums2)}`);
+    console.log(nums);
+    console.log(`배열의 합 = ${arrhap(...nums)}`);
+    //함수 선언
+    function arrhap(...arr){
+    let arrSum = 0;
+    for(let i=0; i<arr.length; i++){
+      arrSum += arr[i]
+    }
+    return arrSum;
+  }
+    //최대값 계산 함수 : maxFunv
+    function maxFunv(...arr){
+      let max = arr[0];
+      for(let i=1; i<arr.length;i++){
+        if(max < arr[i]){
+          max = arr[i];
+        }
+      }
+      return max;
+    }
+    //최소값 계산 함수 : munFunv
+    function minFunv(...arr){
+      let min = arr [0];
+      for(let i=1; i<arr.length;i++){
+        if(min > arr[i]){
+          min = arr[i];
+        }
+      }
+    }
+    console.log(`nums2의 최대값 = ${maxFunv(...nums2)}`)
+    console.log(`nums2의 최소값 = ${minFunv(...nums2)}`)
+    console.log(`배열의 합 = ${arrhap(...nums)}`);
+    </script>
+</body>
+</html>

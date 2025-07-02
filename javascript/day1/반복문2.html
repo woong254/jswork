@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문</title>
+</head>
+<body>
+  <h3>반복문</h3>
+  <script>
+    //별찍기
+    for(let i=1; i<=5; i++){
+      let stars = "";
+      for(let j=1; j<=i; j++){
+        stars += "*";
+      }
+      console.log(stars)
+    }
+
+    //별찍기 2
+    //줄수 : 5까지
+    let stars = "";
+    for(let i=1; i<=5; i++){
+      //빈칸 수 : 5-i까지
+      for(let j=1; j<=5-i; j++){
+        stars += " ";
+      }
+      for(let k=1; k<=i; k++){
+        stars += "*";
+      }
+      stars += "\n"
+    }
+    console.log(stars);
+      //별 수 : i까지
+
+  </script>
+</body>
+</html>
