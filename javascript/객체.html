@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let book = {
+      title : 'javascript',
+      author : '홍길동',
+      pages : 500,
+      price : 15000,
+      info : function(){
+        alert(this.title + '책의 분량은' + this.pages + '쪽입니다')
+      } 
+    };
+    book.info()
+  </script>
+</body>
+</html>
