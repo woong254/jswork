@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>성적처리</title>
+</head>
+<body>
+  <h3>성적처리</h3>
+  <script>
+    function sungjuck(name, kor, eng, math) {
+      let sum = kor + eng + math;
+      let avg = Math.round(sum / 3);
+      let rank;
+      if (avg >= 90) rank = "A";
+      else if (avg >= 80) rank = "B";
+      else if (avg >= 70) rank = "C";
+      else if (avg >= 60) rank = "D";
+      else rank = "F";
+      console.log(`${name}${sum}${avg}${rank}`);
+      document.write(`<table borde=1>
+        <tr>
+          <td>${name}</td>
+          <td>${sum}</td>
+          <td>${avg}</td>
+          <td>${rank}</td>
+          </tr>
+          </table>`)
+        }
+    sungjuck();
+    sungjuck("aaa", 100, 50, 50);
+    sungjuck("bbb", 40, 70, 100);
+    sungjuck("ccc", 30, 70, 50);
+  </script>
+</body>
+</html>
