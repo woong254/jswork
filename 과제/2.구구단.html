@@ -11,9 +11,20 @@
         <button type="button" id="btn">출력</button>
     </form>
     <div id="result"></div>
-
     <script>
         // 출력 버튼이 클릭되면 입력된 단만 출력
+        let input = document.querySelector('#dan')
+        let abtn = document.querySelector('#btn')
+        let result = document.querySelector('#result')        
+        function gugudan(){
+            let i = parseInt(input.value);
+            let gugu = `<h1>${i}단</h1>`
+            for(let j=1; j<=9; j++){
+                gugu += `${i}x${j}=${i*j}<br>`
+            }
+            result.innerHTML= gugu;
+        } 
+        abtn.onclick = gugudan; 
     </script>
 </body>
 </html>
