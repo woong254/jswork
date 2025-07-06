@@ -48,8 +48,36 @@
                     <button type="reset">지우기</button>
                 </li>
             </ul>
-        </form>  
+        </form>
     </div>
-    <script src="js/operator.js"></script>
+    <script>
+        let  num1 = document.querySelector('#num1');
+        let  num2 = document.querySelector('#num2');
+        let  result = document.querySelector('#result');
+        function scradd(){
+            let addnum1 = parseInt(num1.value);
+            let addnum2 = parseInt(num2.value);
+            result.value = addnum1 + addnum2;
+        }
+        add.onclick = scradd;
+        function scrsub(){
+            let addnum1 = parseInt(num1.value);
+            let addnum2 = parseInt(num2.value);
+            result.value = addnum1 - addnum2;
+        }
+        sub.onclick = scrsub;
+        function scrmulty(){
+            let addnum1 = parseInt(num1.value);
+            let addnum2 = parseInt(num2.value);
+            result.value = addnum1 * addnum2;
+        }
+        multy.onclick = scrmulty;
+        function srcdivid(){
+            let addnum1 = parseInt(num1.value);
+            let addnum2 = parseInt(num2.value);
+            result.value = addnum1 / addnum2;
+        }
+        divid.onclick = srcdivid;
+    </script>
 </body>
 </html>
