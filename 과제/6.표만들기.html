@@ -23,6 +23,7 @@
     table {
       width:500px;      
       border-collapse: collapse;
+      text-align: center;
     }
     td {
       border:1px solid #ccc;
@@ -42,7 +43,23 @@
   </div>
 
   <script>
-   
+    let row = document.querySelector('#rCount');
+    let col = document.querySelector('#cCount');
+    function hang10 (){
+      let r = parseInt(row.value);
+      let c = parseInt(col.value);
+      let table = `<table>`
+        for(let i=1; i<=r; i++){
+          table += `<tr>`;
+        for(let j=1; j<=c; j++){
+          table += `<td>${i},${j}</td>`;
+        }
+        table += `</tr>`;
+      }
+      table += `</table>`;
+      contents.innerHTML = table;
+    }
+    btn.onclick = hang10;
   </script>
 </body>
 </html>
