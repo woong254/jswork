@@ -10,6 +10,7 @@
             border-collapse: collapse;
             empty-cells: hide;
             margin-top: 30px;
+            text-align: center;
 
         }
         td{
@@ -28,9 +29,31 @@
         <button type="button" id="btn">배치도</button>
     </form>
     <div id="layout"></div>
-
     <script>
-        
+        let many = document.querySelector('#person');
+        let cols = document.querySelector('#colNum');
+        let seat = 0;
+        function bach () {
+            let many1 = parseInt(many.value);
+            let cols1 = parseInt(cols.value);
+            let row = parseInt(many1 / cols1);
+            row = (many1 % cols1 == 0) ? row : ++row;
+                let table = `<table>`;
+                    for (let i=1; i<=row; i++) {
+                        table += `<tr>`;
+                    for (let j=1; j<=cols1; j++) {
+                        seat++;
+                        table += `<td>좌석 : ${seat}</td>`;
+                        if(many1 <= seat) {
+                            break;
+                        }
+                    }
+                    table += `</tr>`;
+                }
+                table += `</table>`;
+                layout.innerHTML = table;
+            }
+            btn.onclick = bach;
     </script>
 </body>
 </html>
