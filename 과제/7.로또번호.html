@@ -31,7 +31,19 @@
         <div id="lotto"></div>
     </div>
     <script>
-
+        function lottofuc() {
+            let lottonumbers = [];
+            for(let i=1; i<=6; i++){
+            let random = Math.floor(Math.random()*45) + 1;
+            if(lottonumbers.indexOf(random) == -1){
+          lottonumbers.push(random);
+          } else{
+          i--;
+         }
+        }
+        lotto.innerHTML = lottonumbers.join(" ");
+     }
+     btn.onclick = lottofuc;
     </script>
 </body>
 </html>
